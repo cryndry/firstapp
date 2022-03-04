@@ -1,7 +1,12 @@
 {% extends "main.html" %}
+{% load static %}
 
 {% block title %}
 <title>Index Page</title>
+{% endblock %}
+
+{% block css_files %}
+<link rel="stylesheet" href="{% static '/css/style.css' %}">
 {% endblock %}
 
 {% block content %}
