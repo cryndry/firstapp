@@ -5,6 +5,6 @@ from . import views
 urlpatterns = [
     path("",views.index),
     path("index",views.index),
-    path("another",views.another),
+    path("pages",views.pages),
     path("another/<int:id>",views.another_detail)
 ]
