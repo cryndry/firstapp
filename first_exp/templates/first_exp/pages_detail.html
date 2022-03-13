@@ -12,5 +12,28 @@
 {% block script_files %} {% endblock %}
 
 {% block content %}
-<h1>This is page {{id}}</h1>
+<div class="container mt-2">
+    <div class="row">
+        <div class="col-3">
+            {% include 'first_exp/partials/categories.html' %}
+        </div>
+        <div class="col-8">
+            <div class="card mb-2">
+                <div class="row">
+                    <div class="col-md-3">
+                        <img class="img-fluid" src="{% static '/img/'|add:page.image %}" alt="">
+                    </div>
+                    <div class="col-md-9">
+                        <div class="card-body">
+                            <a href="{% url 'pages_detail' page.id %}" style="text-decoration:none;">
+                                <h5 class="card-title">{{page.title}}</h5>
+                                <p class="card-text">{{page.description}}</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}

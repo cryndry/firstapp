@@ -39,4 +39,5 @@ def pages(request):
     context = {"pages":database["pages"]}
     return render(request,"first_exp/page_lists.html",context)
 def pages_detail(request,id):
-    return render(request,"first_exp/pages_detail.html",{"id":id})
+    selectedPage = [page for page in database["pages"] if (page["id"] == id)][0]
+    return render(request,"first_exp/pages_detail.html",{"page":selectedPage})
