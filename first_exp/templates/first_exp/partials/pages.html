@@ -2,14 +2,14 @@
 <div class="card mb-2">
     <div class="row">
         <div class="col-md-3">
-            <img class="img-fluid" src="{% static '/img/1.png' %}" alt="">
+            <img class="img-fluid" src="{% static '/img/'|add:page.image %}" alt="">
         </div>
         <div class="col-md-9">
             <div class="card-body">
-                <a href="{% url 'pages_detail' '1' %}">
-                    <h5 class="card-title">PAGE 1</h5>
+                <a href="{% url 'pages_detail' page.id %}">
+                    <h5 class="card-title">{{page.title}}</h5>
                 </a>
-                <p class="card-text">This goes to page 1</p>
+                <p class="card-text">{{page.description}}</p>
             </div>
         </div>
     </div>

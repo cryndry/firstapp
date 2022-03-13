@@ -21,9 +21,9 @@
         <div class="col-8">
             <h1>Pages are listed here</h1>
             <hr>
-            {% include 'first_exp/partials/pages.html' %}   
-            {% include 'first_exp/partials/pages.html' %}   
-            {% include 'first_exp/partials/pages.html' %}   
+            {% for page in pages %}
+            {% include 'first_exp/partials/pages.html' %}
+            {% endfor %}  
         </div>
     </div>
 </div>
