@@ -22,7 +22,9 @@
             <h1>This is our homepage</h1>
             <hr>
             {% for page in pages %}
-                {% include 'first_exp/partials/pages.html' %}
+                {% if page.is_home and page.is_active %}
+                    {% include 'first_exp/partials/pages.html' %}
+                {% endif %}
             {% endfor %}
         </div>
     </div>
