@@ -41,5 +41,5 @@ def pages(request):
 def pages_detail(request,id):
     # selectedPage = [page for page in database["pages"] if (page["id"] == id)][0]
     # selectedPage = [page for page in Page.objects.all() if (page.filter(id) == id)][0]
-    selectedPage =  Page.objects.get(id=id)
-    return render(request,"first_exp/pages_detail.html",{"page":selectedPage})
+    page =  Page.objects.get(id=id)
+    return render(request,"first_exp/pages_detail.html",{"page":page})
